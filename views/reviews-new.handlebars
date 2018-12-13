@@ -1,0 +1,74 @@
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
+      <h1>New Review for {{movie.title}}</h1>
+    <form method="POST" action="/movies/{{movieID}}/reviews">
+      {{> reviews-form}}
+      <input type="hidden" name="movieId" value="{{movieID}}">
+      <input type="hidden" name="movieTitle" value="{{movie.title}}">
+
+      <!-- BUTTON -->
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">Save Review</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<!-- <form method="POST" action="/reviews">
+    <fieldset>
+        <legend>New Review</legend>
+
+        <p>
+            <label for="review-title">Title</label><br>
+            <input id="review-title" type="text" name="title" />
+        </p>
+
+        <p>
+            <label for="movie-title">Movie Title</label><br>
+            <input id="movie-title" type="text" name="movieTitle" />
+        </p>
+
+        <p>
+            <label for="description-text">Description</label><br>
+            <textarea id="description-text" name="description" rows="10" /></textarea>
+        </p>
+
+        <!-- <p> for the rating system
+            <label for="rating-attribute">Rating</label><br>
+            <textarea id="rating-attribute" type=Number -->
+    <!-- </fieldset>
+
+    <p>
+        <button type="submit">Save Review</button>
+    </p>
+
+</form> --> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <form method="POST" action="/reviews">
+    <fieldset>
+        <legend>New Review</legend>
+        <p>
+            <label for="title">Title</label><br>
+            <input type="test" name="title" />
+        </p>
+    </fieldset>
+
+    <p>
+        <button type="submit">Save Review</button>
+    </p>
+
+</form> -->
