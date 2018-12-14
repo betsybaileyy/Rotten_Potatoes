@@ -15,7 +15,10 @@
   <div class="text-right">
     <a href="/movies/{{movie.id}}/reviews/new" class="btn btn-primary">Write Review</a>
 </div>
-
+<h2>Reviews</h2>
+{{#each reviews}}
+{{> review}}
+{{/each}}
 
 
 
