@@ -17,7 +17,7 @@ module.exports = function(app) {
 
 
     app.get('/movies/:movieId/reviews/new', (req, res) => {
-        res.render('reviews-new', { movieId: req.params.movieID });
+        res.render('reviews-new', { movieId: req.params.movieId });
     })
 
     app.get('/reviews/:id', (req, res) => {

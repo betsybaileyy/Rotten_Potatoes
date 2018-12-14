@@ -13,10 +13,13 @@ app.get('/movies/:id', (req, res) => {
     moviedb.movieInfo({ id: req.params.id }).then(movie => {
         moviedb.movieTrailers({ id: req.params.id }).then(videos => {
       movie.trailer_youtube_id = videos.youtube[0].source
-      console.log('movie.trailer_youtube_id', videos.trailer_youtube_id)
+      console.log('movie.trailer_youtube_id', videos.trailer_youtube_id);
+      Review.find({ movieId: req.params.id }).then(reviews => {
 
-      res.render('movies-show', { movie: movie });
+
+      res.render('movies-show', { movie: movie, reviews: reviews });
     }).catch(console.error);
   }).catch(console.error);
+  })
 });
 }
